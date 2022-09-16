@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import { sendMailAxios } from '../../axios/mail'
 import { alertMessage } from '../../utils'
+import { Helmet } from "react-helmet";
 
 const messageMilliseconds = 3000
 
@@ -53,6 +54,10 @@ function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact</title>
+        <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+      </Helmet>
       <div className='dyn-height' style={{ position: 'relative' }}>
         <h2 className='subtitle'>Let's get in touch!</h2>
         <p className='paragraph'>

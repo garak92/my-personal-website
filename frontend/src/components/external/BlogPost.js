@@ -1,9 +1,10 @@
-import ReactMarkdown from 'react-markdown'
-import { useParams } from 'react-router-dom'
-import { getBlogIdAxios } from '../../axios/blogs'
-import { useState, useEffect } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReactMarkdown from 'react-markdown';
+import { useParams } from 'react-router-dom';
+import { getBlogIdAxios } from '../../axios/blogs';
+import { useState, useEffect } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Helmet } from "react-helmet";
 
 const BlogPost = () => {
   const { id } = useParams()
@@ -32,6 +33,10 @@ const BlogPost = () => {
   return (
     <>
       <div className='blogPost'>
+        <Helmet>
+          <title>Michael Pomata's tech blog</title>
+          <meta name="description" content={blogPost?.title} />
+        </Helmet>
         <h1 style={{ marginTop: "5vh", textAlign: 'center' }}>{blogPost?.title}</h1>
         <ReactMarkdown
           children={blogPost ? blogPost.content : null} components={{

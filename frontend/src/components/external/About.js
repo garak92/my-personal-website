@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet";
+
 function About() {
   return (
     <>
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+      </Helmet>
       <div className='dyn-height' style={{ position: 'relative' }}>
         <h2 className='subtitle'>Hi, I am Michael! Thank you for passing by!</h2>
         <div className='paragraphDiv'>

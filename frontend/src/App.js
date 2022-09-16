@@ -23,6 +23,8 @@ import {
   Route
 } from 'react-router-dom'
 
+//Michael Pomata's personal website. Full stack web developer.
+
 function App() {
   const [isLogged, setIsLogged] = useState(false)
 

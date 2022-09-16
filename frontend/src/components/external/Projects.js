@@ -2,8 +2,9 @@ import { getProjectAxios } from '../../axios/projects'
 import { useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Spinner from 'react-bootstrap/Spinner'
+import { Helmet } from "react-helmet";
 
-function Projects () {
+function Projects() {
   const [data, setData] = useState([])
 
   const getData = async () => {
@@ -21,6 +22,10 @@ function Projects () {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio of projects</title>
+        <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+      </Helmet>
       <div className='cardContainer'>
         <div className='container'>
           <h1 style={{ marginBottom: '1em' }} className='subtitle'>Here you can see some samples of my work</h1>
@@ -41,7 +46,7 @@ function Projects () {
               )
               : <Spinner animation='border' role='status'>
                 <span className='visually-hidden'>Loading...</span>
-                </Spinner>}
+              </Spinner>}
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { getBlogAxios } from '../../axios/blogs'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Spinner from 'react-bootstrap/Spinner'
+import { Helmet } from "react-helmet";
 
 function Blog() {
   const navigate = useNavigate()
@@ -32,6 +33,10 @@ function Blog() {
 
   return (
     <>
+      <Helmet>
+        <title>Michael Pomata's tech blog</title>
+        <meta name="description" content="Blog posts" />
+      </Helmet>
       <div className='container'>
         <h1 style={{ marginBottom: '1em' }} className='subtitle'>Michael Pomata's tech blog</h1>
         <div className='row'>
