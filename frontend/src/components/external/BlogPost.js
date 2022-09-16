@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Helmet } from "react-helmet";
+import logo from '../../logo3.png';
 
 const BlogPost = () => {
   const { id } = useParams()
@@ -36,6 +37,9 @@ const BlogPost = () => {
         <Helmet>
           <title>Michael Pomata's tech blog</title>
           <meta name="description" content={blogPost?.title} />
+          <meta property="og:image" content={logo} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:image" content={logo} />
         </Helmet>
         <h1 style={{ marginTop: "5vh", textAlign: 'center' }}>{blogPost?.title}</h1>
         <ReactMarkdown

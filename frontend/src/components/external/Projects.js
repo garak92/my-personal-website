@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Spinner from 'react-bootstrap/Spinner'
 import { Helmet } from "react-helmet";
+import logo from '../../logo3.png';
 
 function Projects() {
   const [data, setData] = useState([])
@@ -25,6 +26,9 @@ function Projects() {
       <Helmet>
         <title>Portfolio of projects</title>
         <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+        <meta property="og:image" content={logo} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={logo} />
       </Helmet>
       <div className='cardContainer'>
         <div className='container'>

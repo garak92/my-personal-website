@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Spinner from 'react-bootstrap/Spinner'
 import { Helmet } from "react-helmet";
+import logo from '../../logo3.png';
 
 function Blog() {
   const navigate = useNavigate()
@@ -36,6 +37,9 @@ function Blog() {
       <Helmet>
         <title>Michael Pomata's tech blog</title>
         <meta name="description" content="Blog posts" />
+        <meta property="og:image" content={logo} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={logo} />
       </Helmet>
       <div className='container'>
         <h1 style={{ marginBottom: '1em' }} className='subtitle'>Michael Pomata's tech blog</h1>

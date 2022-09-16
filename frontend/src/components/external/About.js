@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import logo from '../../logo3.png';
 
 function About() {
   return (
@@ -6,6 +7,9 @@ function About() {
       <Helmet>
         <title>About</title>
         <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+        <meta property="og:image" content={logo} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={logo} />
       </Helmet>
       <div className='dyn-height' style={{ position: 'relative' }}>
         <h2 className='subtitle'>Hi, I am Michael! Thank you for passing by!</h2>

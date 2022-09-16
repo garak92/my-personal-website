@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import { sendMailAxios } from '../../axios/mail'
 import { alertMessage } from '../../utils'
 import { Helmet } from "react-helmet";
+import logo from '../../logo3.png';
 
 const messageMilliseconds = 3000
 
@@ -57,6 +58,9 @@ function Contact() {
       <Helmet>
         <title>Contact</title>
         <meta name="description" content="Michael Pomata's website. Full stack web dev." />
+        <meta property="og:image" content={logo} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={logo} />
       </Helmet>
       <div className='dyn-height' style={{ position: 'relative' }}>
         <h2 className='subtitle'>Let's get in touch!</h2>
