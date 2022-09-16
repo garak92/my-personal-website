@@ -7,6 +7,12 @@ function Blog() {
   const navigate = useNavigate()
   const [data, setData] = useState([])
 
+  const formatAsUrl = (text) => {
+    return text.toLowerCase()
+      .replace(/ /g, '-')
+      .replace(/[^\w-]+/g, '');
+  }
+
   const getData = async () => {
     try {
       const data = await getBlogAxios()
@@ -16,8 +22,8 @@ function Blog() {
     }
   }
 
-  const handleOnClickPost = (id) => {
-    navigate(`/blog/post/${id}`)
+  const handleOnClickPost = (id, title) => {
+    navigate(`/blog/post/${id}/${title}`)
   }
 
   useEffect(() => {
@@ -31,7 +37,7 @@ function Blog() {
         <div className='row'>
           {data.data
             ? data.data.map(v =>
-              <p onClick={() => handleOnClickPost(v._id)} style={{ cursor: 'pointer' }} className='paragraph'>• {new Date(v.createdDate).toLocaleDateString()}: {v.title}</p>
+              <p onClick={() => handleOnClickPost(v._id, formatAsUrl(v.title))} style={{ cursor: 'pointer' }} className='paragraph'>• {new Date(v.createdDate).toLocaleDateString()}: {v.title}</p>
             )
             : <Spinner animation='border' role='status'>
               <span className='visually-hidden'>Loading...</span>

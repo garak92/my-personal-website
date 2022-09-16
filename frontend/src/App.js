@@ -23,7 +23,7 @@ import {
   Route
 } from 'react-router-dom'
 
-function App () {
+function App() {
   const [isLogged, setIsLogged] = useState(false)
 
   return (
@@ -38,62 +38,62 @@ function App () {
             <Route path='/login' element={<Login />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/blog' element={<Blog />} />
-            <Route path='/blog/post/:id' element={<BlogPost />} />
+            <Route path='/blog/post/:id/:title' element={<BlogPost />} />
             <Route
               path='/internal/blogeditor' element={
                 <Private isLogged={isLogged}>
                   <BlogEditor />
                 </Private>
-}
+              }
             />
             <Route
               path='/internal/blogeditor/add' element={
                 <Private isLogged={isLogged}>
                   <BlogForm type='ADD' />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal/blogEditor/edit/:id' element={
                 <Private isLogged={isLogged}>
                   <BlogForm type='EDIT' />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal/changepassword' element={
                 <Private isLogged={isLogged}>
                   <ChangePass />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal/projectEditor' element={
                 <Private isLogged={isLogged}>
                   <ProjectEditor />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal/projectEditor/add' element={
                 <Private isLogged={isLogged}>
                   <ProjectForm type='ADD' />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal/projectEditor/edit/:id' element={
                 <Private isLogged={isLogged}>
                   <ProjectForm type='EDIT' />
                 </Private>
-            }
+              }
             />
             <Route
               path='/internal' element={
                 <Private isLogged={isLogged}>
                   <HomeInternal />
                 </Private>
-            }
+              }
             />
           </Routes>
           <Footer style={{ position: 'relative' }} />
