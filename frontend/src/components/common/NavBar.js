@@ -53,7 +53,7 @@ function NavBar() {
               <LinkContainer to='/contact'>
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>
-              <Nav.Link onClick={() => window.open('./files/resume.pdf')}>Resume</Nav.Link>
+              <Nav.Link onClick={() => window.open('./files/fabrizio_pomata_resume_fullstack_2022.pdf')}>Resume</Nav.Link>
               <LinkContainer to='/blog'>
                 <Nav.Link>Blog</Nav.Link>
               </LinkContainer>
