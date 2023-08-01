@@ -20,8 +20,8 @@ function About() {
             and projects, and have a bit of experience with DevOps tools such as Docker.
           </p>
           <p className='paragraph'>
-            I code mostly in Javascript, Python, and SQL. As a hobby, I like dabbling into the world of
-            systems programming, so I also use some C and Rust for my personal experiments.
+            I code mostly in Javascript, Java, Python, and SQL. As a hobby, I like dabbling into the world of
+            systems programming, so I also use some C/C++ and Rust for my personal experiments.
           </p>
           <p className='paragraph'>
             Before getting into tech, I've got a philosophy major and worked as a professional musician.
